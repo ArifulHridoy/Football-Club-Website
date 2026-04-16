@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blurr Football Club | Official Site</title>
-    <link rel="stylesheet" href="css.css">
+    <meta name="description" content="Blurr Football Club official homepage with latest news, highlights, and matchday gallery.">
+    <title>Home | Blurr Football Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="site-header" id="top">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Shared site header and navigation -->
+    <header class="site-header">
         <nav class="navbar" aria-label="Primary navigation">
-            <a href="#home" class="brand" aria-label="Blurr Football Club Home">
+            <a href="index.html" class="brand" aria-label="Blurr Football Club Home">
                 <span class="brand-badge">BFC</span>
                 <span class="brand-text">Blurr Football Club</span>
             </a>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#news" class="nav-link">News</a></li>
-                <li><a href="#fixtures" class="nav-link">Fixtures</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#teams" class="nav-link">Teams</a></li>
-                <li><a href="#sponsors" class="nav-link">Sponsors</a></li>
-                <li><a href="#join" class="nav-link">Contact</a></li>
-            </ul>
+            <!-- Hamburger toggle used on mobile devices -->
+            <button class="nav-toggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <a href="#join" class="btn btn-primary nav-cta">Join Club</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Club</a></li>
+                <li><a href="players.html" class="nav-link">Players</a></li>
+                <li><a href="matches.html" class="nav-link">Matches</a></li>
+                <li><a href="join.html" class="nav-link">Join</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    
-    <main>
-        <section class="hero" id="home">
+    <main id="main-content">
+        <!-- Home hero section -->
+        <section class="hero">
             <div class="hero-media" aria-hidden="true"></div>
             <div class="hero-overlay"></div>
-            <div class="hero-content reveal" data-reveal>
+
+            <div class="hero-content reveal">
                 <p class="eyebrow">Season 2026 Now On</p>
-                <h1>Fuel The Game. <br>Own The Weekend.</h1>
+                <h1>Fuel The Game.<br>Own The Weekend.</h1>
                 <p class="hero-copy">Blurr Football Club unites elite performance, club tradition, and community passion every matchday.</p>
                 <div class="hero-actions">
-                    <a href="#fixtures" class="btn btn-primary">View Fixtures</a>
-                    <a href="#news" class="btn btn-outline">Latest Reports</a>
+                    <a href="matches.html" class="btn btn-primary">View Fixtures</a>
+                    <a href="players.html" class="btn btn-outline">Meet Players</a>
                 </div>
             </div>
-            <div class="hero-stats reveal" data-reveal>
+
+            <div class="hero-stats reveal">
                 <article>
                     <h3>114</h3>
                     <p>Years of Legacy</p>
@@ -52,187 +65,136 @@
                     <p>Competitive Teams</p>
                 </article>
                 <article>
-                    <h3>63</h3>
-                    <p>Trophies Won</p>
-                </article>
-                <article>
                     <h3>300+</h3>
-                    <p>Players & Staff</p>
+                    <p>Players and Staff</p>
                 </article>
             </div>
         </section>
 
-         <section class="section" id="news">
-            <div class="section-head reveal" data-reveal>
+        <!-- Latest news cards -->
+        <section class="section" id="news">
+            <div class="section-head reveal">
                 <p class="eyebrow">Club Updates</p>
                 <h2>Latest News</h2>
             </div>
-            <div class="news-grid" aria-live="polite">
-                <article class="news-card reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1200&q=80" alt="A Grade Coaches Reappointed For Season 2026" loading="lazy">
-                    <div class="card-content">
+
+            <div class="grid-3">
+                <article class="card reveal">
+                    <img src="images/coach.jpg" alt="Coaches reviewing match tactics" loading="lazy">
+                    <div class="card-body">
                         <p class="meta">News • 11 Apr 2026</p>
-                        <h3>A Grade Coaches Reappointed For Season 2026</h3>
-                        <p>Leadership continuity confirmed as both senior coaches return to drive next season's campaign.</p>
+                        <h3><a class="news-headline-link" href="news-coaches.html">A Grade Coaches Reappointed</a></h3>
+                        <p>Leadership continuity confirmed as both senior coaches return to drive next season.</p>
                     </div>
                 </article>
-                <article class="news-card reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80" alt="Colts Break 1000+ Day Drought" loading="lazy">
-                    <div class="card-content">
+
+                <article class="card reveal">
+                    <img src="images/castilla1.jpg" alt="Colts celebrating after a hard fought win" loading="lazy">
+                    <div class="card-body">
                         <p class="meta">Match Report • 22 Apr 2026</p>
-                        <h3>Colts Break 1000+ Day Drought</h3>
-                        <p>A relentless four-quarter effort secured the club's most celebrated Colts win in years.</p>
+                        <h3><a class="news-headline-link" href="news-castilla-win.html">Castilla Breaks 10+ Day Win Drought</a></h3>
+                        <p>A relentless four-quarter effort secured one of the club's most celebrated wins.</p>
                     </div>
                 </article>
-                <article class="news-card reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1434648957308-5e6a859697e8?auto=format&fit=crop&w=1200&q=80" alt="A Colts Stay Undefeated" loading="lazy">
-                    <div class="card-content">
+
+                <article class="card reveal">
+                    <img src="images/win.avif" alt="Team celebrating together on the field" loading="lazy">
+                    <div class="card-body">
                         <p class="meta">Match Report • 14 May 2026</p>
-                        <h3>A Colts Stay Undefeated</h3>
+                        <h3><a class="news-headline-link" href="news-colts-undefeated.html">A Colts Stay Undefeated</a></h3>
                         <p>Disciplined defending and quick transition football delivered another complete performance.</p>
                     </div>
                 </article>
             </div>
         </section>
-       
-         <section class="section section-dark" id="fixtures">
-            <div class="section-head reveal" data-reveal>
-                <p class="eyebrow">Match Centre</p>
-                <h2>Fixtures & Match Reports</h2>
-            </div>
-            <div class="fixture-grid">
-                <article class="fixture-card reveal" data-reveal>
-                    <div class="fixture-meta">
-                        <span>Round 1</span>
-                        <span>Sat, 13 Apr</span>
-                    </div>
-                    <h3>Blurr vs West Coast Blues</h3>
-                    <p>Blurr Oval</p>
-                    <span class="fixture-tag">Home</span>
-                </article>
-                <article class="fixture-card reveal" data-reveal>
-                    <div class="fixture-meta">
-                        <span>Round 2</span>
-                        <span>Sat, 20 Apr</span>
-                    </div>
-                    <h3>Harbour City vs Blurr</h3>
-                    <p>Harbour Stadium</p>
-                    <span class="fixture-tag">Away</span>
-                </article>
-                <article class="fixture-card reveal" data-reveal>
-                    <div class="fixture-meta">
-                        <span>Round 3</span>
-                        <span>Sat, 27 Apr</span>
-                    </div>
-                    <h3>Blurr vs Perth Lions</h3>
-                    <p>Blurr Oval</p>
-                    <span class="fixture-tag">Home</span>
-                </article>
-                <article class="fixture-card reveal" data-reveal>
-                    <div class="fixture-meta">
-                        <span>Round 4</span>
-                        <span>Sat, 04 May</span>
-                    </div>
-                    <h3>Riverside Crows vs Blurr</h3>
-                    <p>Riverside Park</p>
-                    <span class="fixture-tag">Away</span>
-                </article>
-            </div>
-        </section>
 
-        <section class="section" id="about">
-            <div class="about-wrap">
-                <div class="about-text reveal" data-reveal>
-                    <p class="eyebrow">About The Club</p>
-                    <h2>Built on Tradition, Driven by Ambition</h2>
-                    <p>Founded in 1911, Blurr Football Club has built a strong sporting culture across generations. From junior development through to senior competition, we foster teamwork, resilience, and elite standards both on and off the field.</p>
-                    <p>Home matches are hosted at Blurr Oval, where members, families, and supporters create a high-energy atmosphere each weekend.</p>
-                </div>
-                <div class="about-image reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=1200&q=80" alt="Players celebrating on football field" loading="lazy">
-                </div>
+        <!-- Image slider section powered by JavaScript -->
+        <section class="section section-dark">
+            <div class="section-head reveal">
+                <p class="eyebrow">Matchday Gallery</p>
+                <h2>Club Moments</h2>
             </div>
-        </section>
 
-        <section class="section section-dark" id="teams">
-            <div class="section-head reveal" data-reveal>
-                <p class="eyebrow">Squads</p>
-                <h2>Our Teams</h2>
-            </div>
-            <div class="team-grid">
-                <article class="team-card reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?auto=format&fit=crop&w=1000&q=80" alt="Senior Men team huddle" loading="lazy">
-                    <h3>Senior Men</h3>
-                    <p>Premier, Reserves, and Development squads competing at high intensity.</p>
+            <div class="slider reveal" data-slider aria-label="Home page image slider">
+                <article class="slide active">
+                    <img src="images/prematch.jpg" alt="Team warm-up before kickoff" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>Pre-Match Intensity</h3>
+                        <p>Every game starts with focused preparation and team unity.</p>
+                    </div>
                 </article>
-                <article class="team-card reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1000&q=80" alt="Women's football team" loading="lazy">
-                    <h3>Senior Women</h3>
-                    <p>High-performance and community pathways across two divisions.</p>
-                </article>
-                <article class="team-card reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1614632537190-23e4146777db?auto=format&fit=crop&w=1000&q=80" alt="Colts team running drills" loading="lazy">
-                    <h3>Colts</h3>
-                    <p>Emerging talent with strong mentorship and development programs.</p>
-                </article>
-                <article class="team-card reveal" data-reveal>
-                    <img src="https://images.unsplash.com/photo-1471295253337-3ceaaedca402?auto=format&fit=crop&w=1000&q=80" alt="Inclusive football players" loading="lazy">
-                    <h3>Integrated Team</h3>
-                    <p>Inclusive football where community, fun, and competition unite.</p>
-                </article>
-            </div>
-        </section>
 
-        <section class="section" id="sponsors">
-            <div class="section-head reveal" data-reveal>
-                <p class="eyebrow">Partners</p>
-                <h2>Our Sponsors</h2>
-            </div>
-            <div class="sponsor-track" aria-label="Sponsor logos slider">
-                <div class="sponsor-row">
-                    <article class="sponsor-item"><span class="sponsor-icon">A</span><span>Axis Sport</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">R</span><span>Redline Fitness</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">N</span><span>Northbank</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">F</span><span>Fieldwork Co.</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">G</span><span>Gameday Cafe</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">A</span><span>Axis Sport</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">R</span><span>Redline Fitness</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">N</span><span>Northbank</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">F</span><span>Fieldwork Co.</span></article>
-                    <article class="sponsor-item"><span class="sponsor-icon">G</span><span>Gameday Cafe</span></article>
-                </div>
-            </div>
-        </section>
+                <article class="slide">
+                    <img src="images/fans.jpg" alt="Fans celebrating in the stand" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>Home Crowd Energy</h3>
+                        <p>Supporters turn every home fixture into a fortress atmosphere.</p>
+                    </div>
+                </article>
 
-        <section class="join-strip reveal" data-reveal id="join" aria-label="Quick join section">
-            <div class="join-strip-overlay"></div>
-            <div class="join-strip-content">
-                <div>
-                    <p class="eyebrow">Join Blurr</p>
-                    <h2>Ready To Join The Club?</h2>
-                    <p>Players, volunteers, and sponsors are all welcome. Sign up quickly and our team will contact you with the right pathway.</p>
+                <article class="slide"> <img src="images/winning.jpg" alt="Players celebrating after a goal" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>Winning Culture</h3>
+                        <p>Built through effort, discipline, and belief in one another.</p>
+                    </div>
+                </article>
+
+                <article class="slide">
+                     <img src="images/training.jpg" alt="Players training on the field" loading="lazy">
+                     <div class="slide-caption">
+                         <h3>Training Sessions</h3>
+                         <p>Focused on growth, teamwork, and continuous improvement every day.</p>
+                     </div>
+                </article>
+
+                <div class="slider-controls" aria-hidden="false">
+                    <button class="slider-btn" type="button" data-prev aria-label="Previous slide">&#10094;</button>
+                    <button class="slider-btn" type="button" data-next aria-label="Next slide">&#10095;</button>
                 </div>
-                <form class="join-strip-form" action="#" method="post">
-                    <label class="sr-only" for="joinName">Full Name</label>
-                    <input id="joinName" name="name" type="text" placeholder="Full name" required>
-                    <label class="sr-only" for="joinEmail">Email Address</label>
-                    <input id="joinEmail" name="email" type="email" placeholder="Email address" required>
-                    <label class="sr-only" for="joinPhone">Mobile Number</label>
-                    <input id="joinPhone" name="phone" type="tel" placeholder="Mobile number" required>
-                    <label class="sr-only" for="joinRole">I want to join as</label>
-                    <select id="joinRole" name="role" required>
-                        <option value="" disabled selected>I want to join as...</option>
-                        <option value="player">Player</option>
-                        <option value="volunteer">Volunteer</option>
-                        <option value="sponsor">Sponsor</option>
-                        <option value="supporter">Supporter</option>
-                    </select>
-                    <label class="sr-only" for="joinMessage">Message</label>
-                    <textarea id="joinMessage" name="message" rows="3" placeholder="Tell us a little about your interest"></textarea>
-                    <button type="submit" class="btn btn-primary">Submit Registration</button>
-                </form>
             </div>
         </section>
     </main>
+
+    <!-- Shared footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Blurr Football Club</h3>
+                <p>Blurr Oval, 10 McGillivray Rd, Mount Claremont WA 6010</p>
+                <p>Email: info@blurrfc.com.au<br>Phone: (08) 9000 0000</p>
+            </div>
+
+            <div>
+                <h4>Popular Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Club</a></li>
+                    <li><a href="players.html">Team and Players</a></li>
+                    <li><a href="matches.html">Fixtures and Results</a></li>
+                    <li><a href="contact.html">Join Club</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Useful Links</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Membership Enquiry</a></li>
+                    <li><a href="contact.html">Volunteer Enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+            <a href="#" aria-label="TikTok">TikTok</a>
+        </div>
+
+        <p class="copyright">&copy; 2026 Blurr Football Club. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
+
+
