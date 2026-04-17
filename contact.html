@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Blurr Football Club for membership, sponsorship, and volunteering opportunities.">
+    <title>Contact | Blurr Football Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="index.html" class="brand" aria-label="Blurr Football Club Home">
+                <span class="brand-badge">BFC</span>
+                <span class="brand-text">Blurr Football Club</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Club</a></li>
+                <li><a href="players.html" class="nav-link">Players</a></li>
+                <li><a href="matches.html" class="nav-link">Matches</a></li>
+                <li><a href="join.html" class="nav-link">Join</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero" style="--hero-image: url('images/photo-1552667466-07770ae110d0.jpg');">
+            <div class="page-hero-content reveal">
+                <p class="eyebrow">Get in Touch</p>
+                <h1>Contact The Club</h1>
+                <p>Use the form below for player registrations, sponsorship, or volunteer enquiries.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="contact-layout">
+                <!-- Club contact information -->
+                <article class="contact-card reveal">
+                    <h2>Club Office</h2>
+                    <p>Our team responds to all enquiries within 1-2 business days.</p>
+                    <ul class="contact-list">
+                        <li><strong>Address:</strong> Blurr Oval, 10 McGillivray Rd, Mount Claremont WA 6010</li>
+                        <li><strong>Email:</strong> info@blurrfc.com.au</li>
+                        <li><strong>Phone:</strong> (08) 9000 0000</li>
+                        <li><strong>Training:</strong> Tue and Thu, 6:00 PM - 8:00 PM</li>
+                    </ul>
+                </article>
+
+                <!-- Contact form with JavaScript validation -->
+                <article class="contact-form-wrap reveal">
+                    <h2>Send Us a Message</h2>
+                    <form data-contact-form novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input id="name" name="name" type="text" aria-invalid="false" required>
+                            <p class="error-text" data-error-for="name"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" aria-invalid="false" required>
+                            <p class="error-text" data-error-for="email"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" name="phone" type="tel" aria-invalid="false" required>
+                            <p class="error-text" data-error-for="phone"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" aria-invalid="false" required>
+                                <option value="">Choose a topic</option>
+                                <option value="membership">Membership</option>
+                                <option value="player">Player Registration</option>
+                                <option value="sponsorship">Sponsorship</option>
+                                <option value="volunteer">Volunteer</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <p class="error-text" data-error-for="subject"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" aria-invalid="false" required></textarea>
+                            <p class="error-text" data-error-for="message"></p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                        <p class="form-success" aria-live="polite"></p>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Blurr Football Club</h3>
+                <p>Blurr Oval, 10 McGillivray Rd, Mount Claremont WA 6010</p>
+                <p>Email: info@blurrfc.com.au<br>Phone: (08) 9000 0000</p>
+            </div>
+
+            <div>
+                <h4>Popular Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Club</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="matches.html">Matches</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+            <a href="#" aria-label="TikTok">TikTok</a>
+        </div>
+
+        <p class="copyright">&copy; 2026 Blurr Football Club. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
