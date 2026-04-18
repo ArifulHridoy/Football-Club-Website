@@ -1373,3 +1373,67 @@ textarea:focus-visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Match Card Styles */
+.match-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.match-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.85rem 0;
+    padding: 1rem;
+    background: rgba(215, 25, 32, 0.08);
+    border: 1px solid rgba(215, 25, 32, 0.24);
+    border-radius: 0.75rem;
+    gap: 0.5rem;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 0.35rem;
+}
+
+.team-name {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.score {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.vs {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.75rem;
+    color: var(--muted);
+    opacity: 0.6;
+    margin: 0 0.35rem;
+}
+
+.result-status {
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+}
