@@ -1088,3 +1088,217 @@ textarea:focus-visible {
     border-color: rgba(215, 25, 32, 0.55);
     background: rgba(255, 255, 255, 0.04);
 }
+
+/* Contact Form */
+.contact-layout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.join-layout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.join-page-shell {
+    position: relative;
+    width: min(100% - 2rem, var(--max-width));
+    margin: 2rem auto 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: var(--shadow);
+    min-height: 620px;
+    display: grid;
+    align-items: center;
+}
+
+.join-page-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/photo-1551958219-acbc608c6377.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    transform: scale(1.08);
+}
+
+.join-page-shell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.46));
+}
+
+.join-page-content {
+    position: relative;
+    z-index: 1;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    display: grid;
+    gap: 1rem;
+}
+
+.join-info,
+.join-form-card {
+    background: rgba(10, 10, 10, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 1.1rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.join-info:hover,
+.join-form-card:hover,
+.contact-card:hover,
+.contact-form-wrap:hover,
+.player-roster-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(215, 25, 32, 0.36);
+    box-shadow: var(--shadow);
+}
+
+.join-info p {
+    color: #e7e7e7;
+}
+
+.join-benefits {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+}
+
+.join-benefits li {
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.7rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.join-form-card form {
+    margin-top: 0.85rem;
+}
+
+.join-form-grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.join-form-grid .form-group {
+    margin-bottom: 0;
+}
+
+.player-roster {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.player-roster-card {
+    padding: 1rem;
+}
+
+.player-roster-card h3 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.player-roster-meta {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.7rem;
+}
+
+.player-stats {
+    list-style: none;
+    display: grid;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+}
+
+.player-stats li {
+    padding: 0.45rem 0.6rem;
+    border-radius: 0.55rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.contact-card,
+.contact-form-wrap {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.95rem;
+    background: linear-gradient(160deg, #171717, #121212);
+    box-shadow: var(--shadow-soft);
+    padding: 1rem;
+}
+
+.contact-list {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.35rem;
+    margin-bottom: 0.8rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background: rgba(12, 12, 12, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.6rem;
+    font: inherit;
+    transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+    border-color: rgba(255, 255, 255, 0.36);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: rgba(215, 25, 32, 0.75);
+    box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.14);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.error-text {
+    color: #ff8f8f;
+    min-height: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.input-error {
+    border-color: #ff8f8f !important;
+}
+
+.form-success {
+    margin-top: 0.8rem;
+    color: #8de7a7;
+    font-weight: 700;
+}
