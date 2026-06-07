@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 
 namespace myFootballClub
 {
@@ -102,17 +103,32 @@ namespace myFootballClub
         protected void gvNews_RowUpdating(object sender, System.Web.UI.WebControls.GridViewUpdateEventArgs e)
         {
             int newsId = Convert.ToInt32(gvNews.DataKeys[e.RowIndex].Value);
-            string title = ((System.Web.UI.WebControls.TextBox)gvNews.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
-            string description = ((System.Web.UI.WebControls.TextBox)gvNews.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
-            string image = ((System.Web.UI.WebControls.TextBox)gvNews.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
-            string dateText = ((System.Web.UI.WebControls.TextBox)gvNews.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+
+            GridViewRow row = gvNews.Rows[e.RowIndex];
+
+            string title = ((System.Web.UI.WebControls.TextBox)row.Cells[1].Controls[0]).Text;
+
+            System.Web.UI.WebControls.TextBox txtEditDescription =
+                (System.Web.UI.WebControls.TextBox)row.FindControl("txtEditDescription");
+
+            string description = txtEditDescription.Text;
+
+            string image = ((System.Web.UI.WebControls.TextBox)row.Cells[3].Controls[0]).Text;
+
+            string dateText = ((System.Web.UI.WebControls.TextBox)row.Cells[4].Controls[0]).Text;
 
             DateTime publishDate;
             DateTime.TryParse(dateText, out publishDate);
 
             using (SqlConnection con = DBHelper.GetConnection())
             {
-                string query = "UPDATE News SET Title=@Title, Description=@Description, Image=@Image, PublishDate=@PublishDate WHERE NewsId=@NewsId";
+                string query = @"UPDATE News
+                         SET Title=@Title,
+                             Description=@Description,
+                             Image=@Image,
+                             PublishDate=@PublishDate
+                         WHERE NewsId=@NewsId";
+
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Title", title.Trim());

@@ -52,7 +52,26 @@
                             <Columns>
                                 <asp:BoundField DataField="NewsId" HeaderText="ID" ReadOnly="True" />
                                 <asp:BoundField DataField="Title" HeaderText="Title" />
-                                <asp:BoundField DataField="Description" HeaderText="Description" />
+                                <asp:TemplateField HeaderText="Description">
+
+    <ItemTemplate>
+        <%# Eval("Description") != null && Eval("Description").ToString().Length > 80
+            ? Eval("Description").ToString().Substring(0, 80) + "..."
+            : Eval("Description") %>
+    </ItemTemplate>
+
+    <EditItemTemplate>
+        <asp:TextBox ID="txtEditDescription"
+            runat="server"
+            Text='<%# Bind("Description") %>'
+            TextMode="MultiLine"
+            Rows="6"
+            Width="100%"
+            CssClass="textarea">
+        </asp:TextBox>
+    </EditItemTemplate>
+
+</asp:TemplateField>
                                 <asp:BoundField DataField="Image" HeaderText="Image" />
                                 <asp:BoundField DataField="PublishDate" HeaderText="Publish Date" />
                                 <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />

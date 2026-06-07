@@ -30,6 +30,13 @@ html {
     scroll-behavior: smooth;
 }
 
+.textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    resize: vertical;
+}
+
 body {
     position: relative;
     font-family: "Rajdhani", sans-serif;
