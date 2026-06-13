@@ -12,7 +12,7 @@
     --max-width: 1200px;
     --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
     --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.28);
-    --bg-image: url("../images/photo-1431324155629-1a6deb1dec8d.jpg");
+    --bg-image: url("https://images.pexels.com/photos/14658685/pexels-photo-14658685.jpeg");
 }
 
 * {
@@ -48,31 +48,28 @@ body {
     overflow-x: hidden;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    filter: blur(30px) grayscale(1) saturate(0.35) brightness(0.55) contrast(1.04);
-    transform: scale(1.12);
-    opacity: 0.62;
-    pointer-events: none;
-    z-index: -2;
-}
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: var(--bg-image);
+        background-size: cover;
+        background-position: center;
+        filter: blur(20px) brightness(0.35);
+        transform: scale(1.1);
+        opacity: 0.6;
+        pointer-events: none;
+        z-index: -2;
+    }
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background:
-        linear-gradient(180deg, rgba(8, 8, 8, 0.34), rgba(8, 8, 8, 0.6)),
-        radial-gradient(circle at 18% 8%, rgba(215, 25, 32, 0.06), rgba(215, 25, 32, 0) 34%),
-        radial-gradient(circle at 82% 0%, rgba(255, 59, 48, 0.04), rgba(255, 59, 48, 0) 30%);
-    pointer-events: none;
-    z-index: -1;
-}
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: linear-gradient( 180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45) );
+        pointer-events: none;
+        z-index: -1;
+    }
 
 img {
     max-width: 100%;
@@ -423,6 +420,16 @@ textarea:focus-visible {
     align-items: center;
     padding: 7rem 1rem 4rem;
     overflow: hidden;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url('https://png.pngtree.com/background/20230526/original/pngtree-green-field-inside-football-stadium-in-silhouette-under-sky-picture-image_2745416.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-media {

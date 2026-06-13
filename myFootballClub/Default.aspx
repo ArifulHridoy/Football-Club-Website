@@ -6,8 +6,8 @@
     <header class="site-header">
         <nav class="navbar">
             <div class="brand">
-                <span class="brand-badge">FC</span>
-                <span class="brand-text">Football Club</span>
+                <span class="brand-badge">AFC</span>
+                <span class="brand-text">Ariful Football Club</span>
             </div>
             <ul class="nav-menu">
                 <li><a class="nav-link active" href="Default.aspx">Home</a></li>

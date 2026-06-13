@@ -23,7 +23,7 @@
         </nav>
     </header>
 
-    <section class="page-hero" style="--hero-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=80');">
+    <section class="page-hero" style="--hero-image: url('https://images.pexels.com/photos/16826138/pexels-photo-16826138.jpeg');">
         <div class="page-hero-content">
             <p class="eyebrow">Join Us</p>
             <h1>Become a Member</h1>
